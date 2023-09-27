@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  spring-app:
+    image: egon89/spring-guide
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      # it mounts the project directory (current directory) on the host to /data/app
+      # inside the container, allowing you to modify the code on the fly, without having to rebuild the image
+      - /data/app
+    ports:
+      - "8080:8080"
