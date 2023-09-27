@@ -11,4 +11,4 @@ services:
       # inside the container, allowing you to modify the code on the fly, without having to rebuild the image
       - /data/app
     ports:
-      - "8080:8080"
+      - '${APP_HOST_PORT:-8081}:${PORT:-8081}'
