@@ -12,3 +12,6 @@ services:
       - /data/app
     ports:
       - '${APP_HOST_PORT:-8081}:${PORT:-8081}'
+      - '5005:5005'
+    environment:
+      - JAVA_TOOL_OPTIONS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
