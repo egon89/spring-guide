@@ -1,5 +1,5 @@
 databaseChangeLog:
 
     - include:
-      file: 20231005081500_create_customer.yaml
-      relativeToChangelogFile: true
+        file: 20231005081500_create_customer.yaml
+        relativeToChangelogFile: true
