@@ -1,5 +1,5 @@
 databaseChangeLog:
 
-  - include:
-      file: 20231005081525_add_entity_car.yaml
+    - include:
+      file: 20231005081500_create_customer.yaml
       relativeToChangelogFile: true
