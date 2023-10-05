@@ -1,0 +1,5 @@
+databaseChangeLog:
+
+  - include:
+      file: 20231005081525_add_entity_car.yaml
+      relativeToChangelogFile: true

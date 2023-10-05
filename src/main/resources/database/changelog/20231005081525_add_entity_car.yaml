@@ -1,0 +1,24 @@
+databaseChangeLog:
+  -  changeSet:
+       id:  20231005081524-1
+       author:  user
+       changes:
+         - createTable:
+             tableName: person
+             columns:
+               - column:
+                   name: id
+                   type: int
+                   autoIncrement: true
+                   constraints:
+                     primaryKey: true
+                     nullable: false
+               - column:
+                   name: make
+                   type: varchar(255)
+               - column:
+                   name: brand
+                   type: varchar(255)
+               - column:
+                   name: price
+                   type: double
