@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: dev
+  creationTimestamp: null
+  labels:
+    app: sg-core
+  name: sg-core
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sg-core
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: sg-core
+    spec:
+      containers:
+      - image: egon89/spring-guide:latest
+        name: spring-guide
+        resources: {}
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:postgresql://postgres:5432/postgres
+        - name: SPRING_DATASOURCE_USERNAME
+          value: postgres
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: pg_secret
+
+status: {}
